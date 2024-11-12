@@ -9,9 +9,9 @@ resource "aws_apigatewayv2_api" "wifi_zones_api" {
   protocol_type = "HTTP"
 
   cors_configuration {
-    allow_origins = ["http://localhost:3000", "http://192.168.1.4:3000"]                                 # Los dominios de tu frontend
-    allow_methods = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]                                          # Métodos permitidos
-    allow_headers = ["Content-Type", "Authorization", "X-Amz-Date", "X-Api-Key", "X-Amz-Security-Token"] # Encabezados permitidos
+    allow_origins = ["http://localhost:3000", "http://192.168.1.4:3000"]
+    allow_methods = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+    allow_headers = ["Content-Type", "Authorization", "X-Amz-Date", "X-Api-Key", "X-Amz-Security-Token"]
   }
 }
 
@@ -243,7 +243,7 @@ resource "aws_iam_policy" "lambda_s3_getobject_policy" {
         Action = [
           "s3:GetObject"
         ]
-        Resource = "arn:aws:s3:::archivoswifizonessubida2/*" # Asegúrate de que el nombre coincide
+        Resource = "arn:aws:s3:::archivoswifizonessubida2/*"
       }
     ]
   })
@@ -312,11 +312,11 @@ resource "aws_lambda_function" "delete_zone" {
 # Crear la función Lambda para procesar archivos subidos csv
 resource "aws_lambda_function" "subir_archivos_csv_wifi_zones" {
   function_name = "Subir_Archivos_CSV_WIFI_ZONES"
-  handler       = "subir_archivos_csv_wifi_zones.lambda_handler" # Debe coincidir con el nombre de tu archivo Python y la función
-  runtime       = "python3.12"                                   # Asegúrate de que el runtime sea Python
+  handler       = "subir_archivos_csv_wifi_zones.lambda_handler"
+  runtime       = "python3.12"
   role          = aws_iam_role.lambda_exec_role.arn
-  filename      = "lambdas/py/subir_archivos_csv_wifi_zones.zip" # Ruta al archivo ZIP con tu código Python
-  timeout       = 240                                            # Ajusta el tiempo de espera a 4 minutos
+  filename      = "lambdas/py/subir_archivos_csv_wifi_zones.zip"
+  timeout       = 240
 }
 
 
@@ -326,8 +326,8 @@ resource "aws_s3_bucket_notification" "s3_to_lambda_notification" {
 
   lambda_function {
     lambda_function_arn = aws_lambda_function.subir_archivos_csv_wifi_zones.arn
-    events              = ["s3:ObjectCreated:*"] # Se activa en cualquier subida de archivo
+    events              = ["s3:ObjectCreated:*"]
   }
 
-  depends_on = [aws_lambda_permission.allow_s3_invoke_lambda] # Asegura que se configure después del permiso
+  depends_on = [aws_lambda_permission.allow_s3_invoke_lambda]
 }

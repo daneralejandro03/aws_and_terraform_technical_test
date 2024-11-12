@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d0053b2-dcc4-4b6e-a6f8-74e9fd5a0db9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/wifi-zones/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wifi-zones/src/components/ShowWifiZones.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wifi-zones/src/functions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wifi-zones/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/wifi-zones/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wifi-zones/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/wifi-zones/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wifi-zones/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/wifi-zones/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wifi-zones/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/wifi-zones/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +22,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/wifi-zones" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -40,7 +36,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/daner/OneDrive/Escritorio/AWS/Terraform&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -72,6 +68,9 @@
       <workItem from="1731374151346" duration="2254000" />
       <workItem from="1731377581397" duration="508000" />
       <workItem from="1731380876934" duration="795000" />
+      <workItem from="1731433527865" duration="249000" />
+      <workItem from="1731433809810" duration="82000" />
+      <workItem from="1731436003879" duration="11000" />
     </task>
     <servers />
   </component>
