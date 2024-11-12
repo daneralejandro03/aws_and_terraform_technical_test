@@ -21,7 +21,7 @@ def record_exists(name, latitude, longitude):
         response = table.scan(
             FilterExpression='#n = :name AND latitude = :latitude AND longitude = :longitude',
             ExpressionAttributeNames={
-                '#n': 'name'  # Cambia 'name' a un alias para evitar conflictos
+                '#n': 'name' 
             },
             ExpressionAttributeValues={
                 ':name': name,
