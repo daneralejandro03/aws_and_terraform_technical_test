@@ -1,0 +1,12 @@
+$paths = @(
+    "C:\Users\daner\OneDrive\Escritorio\AWS\Terraform\lambdas\js\update_wifi_zone",
+    "C:\Users\daner\OneDrive\Escritorio\AWS\Terraform\lambdas\js\get_wifi_zones",
+    "C:\Users\daner\OneDrive\Escritorio\AWS\Terraform\lambdas\js\get_wifi_zone_by_id",
+    "C:\Users\daner\OneDrive\Escritorio\AWS\Terraform\lambdas\js\delete_wifi_zone",
+    "C:\Users\daner\OneDrive\Escritorio\AWS\Terraform\lambdas\js\create_wifi_zone"
+)
+
+foreach ($path in $paths) {
+    $zipPath = "$($path).zip"
+    Compress-Archive -Path "$path\*" -DestinationPath $zipPath
+}
