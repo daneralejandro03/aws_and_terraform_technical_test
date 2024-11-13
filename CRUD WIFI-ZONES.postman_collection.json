@@ -9,7 +9,7 @@
 	},
 	"item": [
 		{
-			"name": "Get data",
+			"name": "Post data",
 			"event": [
 				{
 					"listen": "test",
