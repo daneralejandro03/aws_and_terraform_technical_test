@@ -27,17 +27,27 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 57,\r\n  \"name\": \"Zona Wi-Fi Manizales\",\r\n  \"latitude\": 37.7749,\r\n  \"longitude\": -122.4194,\r\n  \"punto_zwf\": \"Punto Principal\",\r\n  \"propietario\": \"Ayuntamiento\",\r\n  \"contrato\": \"Contrato_2024\",\r\n  \"sector\": \"Sector A\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "https://t4vnkb2nyh.execute-api.us-east-1.amazonaws.com/wifi-zones",
+					"raw": "https://zrqdn42dz2.execute-api.us-east-1.amazonaws.com/dev/wifi-zones",
 					"protocol": "https",
 					"host": [
-						"t4vnkb2nyh",
+						"zrqdn42dz2",
 						"execute-api",
 						"us-east-1",
 						"amazonaws",
 						"com"
 					],
 					"path": [
+						"dev",
 						"wifi-zones"
 					]
 				},
@@ -120,7 +130,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://zrqdn42dz2.execute-api.us-east-1.amazonaws.com/dev/wifi-zones/1",
+					"raw": "https://zrqdn42dz2.execute-api.us-east-1.amazonaws.com/dev/wifi-zones/{id}",
 					"protocol": "https",
 					"host": [
 						"zrqdn42dz2",
@@ -132,7 +142,7 @@
 					"path": [
 						"dev",
 						"wifi-zones",
-						"1"
+						"{id}"
 					]
 				},
 				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
@@ -161,7 +171,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": 1,\n  \"name\": \"Zona Wi-Fi Medellin\",\n  \"latitude\": 37.7749,\n  \"longitude\": -122.4194,\n  \"punto_zwf\": \"Punto Principal\",\n  \"propietario\": \"Ayuntamiento\",\n  \"contrato\": \"Contrato_2024\",\n  \"sector\": \"Sector A\"\n}",
+					"raw": "{\n  \"id\": 57,\n  \"name\": \"Zona Wi-Fi Medellin\",\n  \"latitude\": 37.7749,\n  \"longitude\": -122.4194,\n  \"punto_zwf\": \"Punto Principal\",\n  \"propietario\": \"Ayuntamiento\",\n  \"contrato\": \"Contrato_2024\",\n  \"sector\": \"Sector A\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -169,7 +179,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://zrqdn42dz2.execute-api.us-east-1.amazonaws.com/dev/wifi-zones/1",
+					"raw": "https://zrqdn42dz2.execute-api.us-east-1.amazonaws.com/dev/wifi-zones/{id}",
 					"protocol": "https",
 					"host": [
 						"zrqdn42dz2",
@@ -181,7 +191,7 @@
 					"path": [
 						"dev",
 						"wifi-zones",
-						"1"
+						"{id}"
 					]
 				},
 				"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
@@ -218,7 +228,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://zrqdn42dz2.execute-api.us-east-1.amazonaws.com/dev/wifi-zones/1",
+					"raw": "https://zrqdn42dz2.execute-api.us-east-1.amazonaws.com/dev/wifi-zones/{id}",
 					"protocol": "https",
 					"host": [
 						"zrqdn42dz2",
@@ -230,7 +240,7 @@
 					"path": [
 						"dev",
 						"wifi-zones",
-						"1"
+						"{id}"
 					]
 				},
 				"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
