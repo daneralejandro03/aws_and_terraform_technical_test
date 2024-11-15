@@ -231,6 +231,7 @@ resource "aws_iam_policy" "lambda_dynamodb_policy" {
   })
 }
 
+# Obtener el objeto de s3 csv 
 resource "aws_iam_policy" "lambda_s3_getobject_policy" {
   name        = "lambda_s3_getobject_policy"
   description = "Permite acceso de lectura (GetObject) al bucket S3 específico para Lambda."
